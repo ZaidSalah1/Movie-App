@@ -1,7 +1,8 @@
 
 
 
-<img width="3584" height="2240" alt="Scene 5" src="https://github.com/user-attachments/assets/ac1fe546-2e1a-494b-adf5-aa2076ebca49" />
+![Uploading Scene 5.png…]()
+
 
 # Welcome to your Expo app 👋
 
