@@ -8,9 +8,17 @@ export const TMDB_CONFIG = {
 };
 
 export const fetchMovies = async ({ query }: { query: string }) => {
-  const endpoint = query
-    ? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
-    : `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;
+  let endpoint = "";
+
+  if (query) {
+    // البحث ما بيدعم sort_by كويس، فرجع النتائج وخلي الفرز محلي إذا حبيت
+    endpoint = `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(
+      query
+    )}&include_adult=false`;
+  } else {
+    // أحدث + أفضل تقييم
+    endpoint = `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=vote_average.desc&primary_release_date.gte=2024-01-01&primary_release_date.lte=2025-12-31&vote_count.gte=200&include_adult=false`;
+  }
 
   const response = await fetch(endpoint, {
     method: "GET",
@@ -18,8 +26,7 @@ export const fetchMovies = async ({ query }: { query: string }) => {
   });
 
   if (!response.ok) {
-    // @ts-ignore
-    throw new Error("Faild to fetch movies, ", response.statusText);
+    throw new Error("Failed to fetch movies");
   }
 
   const data = await response.json();
