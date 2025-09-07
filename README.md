@@ -29,7 +29,7 @@ Browse trending, search titles, view details (cast, rating, overview), and save 
 - **Expo Router**
 - **TMDb API v3**
 - **AsyncStorage** (favorites cache)
-- **TypeScript** (optional if enabled)
+- **TypeScript**
 
 ---
 
