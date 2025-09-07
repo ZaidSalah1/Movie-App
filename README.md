@@ -3,7 +3,38 @@
 
 <img width="3584" height="2240" alt="Scene 5" src="https://github.com/user-attachments/assets/6c753191-743e-4ec8-9bc2-736446bde66d" />
 
-# Welcome to your Expo app 👋
+# 🎬 Movie App (Expo + TMDb)
+
+A fast, clean movie browser built with **Expo Router** and **React Native** using **TMDb** API.  
+Browse trending, search titles, view details (cast, rating, overview), and save favorites locally.
+
+---
+
+## ✨ Features
+
+- 🔎 **Search** movies with debounce  
+- ⭐ **Favorites** (local AsyncStorage) with Saved screen  
+- 📄 **Details** screen (rating, votes, overview)  
+- 🧭 **Expo Router** (file-based navigation)  
+- 🖼️ **Optimized images** with TMDb CDN  
+- 📱 **Responsive UI** + dark theme  
+- ⚡ **Pagination** & pull-to-refresh  
+- 🌐 **i18n-ready** (TMDb supports `language=ar,en`)
+
+---
+
+## 🛠 Tech Stack
+
+- **React Native** + **Expo**
+- **Expo Router**
+- **TMDb API v3**
+- **AsyncStorage** (favorites cache)
+- **TypeScript** (optional if enabled)
+
+---
+
+## 🚀 Getting Started
+
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
